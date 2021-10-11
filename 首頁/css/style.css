@@ -1,0 +1,349 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.header{
+  height:80px;
+  /* box-sizing: border-box; */
+}
+nav > ul{
+list-style: none;
+}
+#mynav a{
+font-size: 1.5rem;
+padding:20px ;
+text-decoration: none;
+color: #212121;
+}
+#mynav a:hover {
+background-color: #5e7480ad;
+border-radius: 5px;
+color: #d8d8d8;
+text-decoration: none;
+}
+#navbar{
+display:flex;
+align-content: center;
+}
+nav{
+display: flex;
+position: absolute;
+right:  10px;
+top: 35px;
+
+}
+#log{
+  text-align: center;
+  height: 100px;
+}
+h1 {
+  font-size: 5rem;
+  margin-top: 20px;
+  /* line-height: 125px; */
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color:#212121 ;
+}
+.footer{
+  color:#212121;
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  position: relative;
+}
+.back-to-top{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  margin-right: 100px;
+  background-color: #21212181;
+  color: #ffffff;
+}
+/*電腦版時，不要顯示圖示*/
+.showMenu{
+  display:none;
+  background-image: url(/首頁/img/hamber.jpeg);
+  background-size: cover;
+  opacity: 0.8;
+}
+
+ 
+/*手機版時的狀態*/
+@media (max-width: 576px) {  
+  
+  .menu {
+  /*隱藏選單，將最大高度設為0，overflow的文字就不會顯示*/
+    max-height: 0px;
+    overflow: hidden;
+  /*載入時漸變效果*/
+    transition: max-height 1.3s;
+    margin-top: 1px;
+  /*絕對定位疊在網頁上，並且利用上頭的隱藏技巧*/
+    position: absolute;
+    z-index: 100;
+    top: 100px;
+  /* left:0 right:0表示滿版 */
+    left: 0;
+    right: 0;
+    background:#5e7480;
+    text-align: center;
+    flex-direction: column;
+  }
+  .menu li{
+     float: none;
+  }
+  .menu li a{
+    transition: all 0.3s;
+    color:white;
+  }
+  /* .menu li a:hover{
+    background: #69CA62;
+  } */
+  /*RWD時，選單圖示的位置*/
+   .showMenu{
+    
+    display:block;
+    float: right;
+    margin: 1em;
+    font-size:20px;
+    color:black;
+  } 
+  /*jQ點擊後動態在 body 加上 class ，藉著修改 max-height，畫面就顯示了*/
+  .menu-show .menu{
+    max-height: 500px
+  }
+ 
+}
+
+
+html {
+  font-size: 80%;
+}
+
+body {
+  /* font-size: 1.6rem; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+  background-color: #5e7480ad;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+a {
+  color: #267481;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+@media only screen and (min-width: 1050px) {
+  body[data-hijacking="on"] {
+    overflow: hidden;
+  }
+}
+
+.cd-section {
+  height: 100vh;
+   width: 100vh;
+}
+.cd-section h2 {
+  line-height: 100vh;
+  text-align: center;
+  font-size: 1rem;
+  
+}
+.cd-section:first-of-type > div {
+  background-image: url(../img/coffee-shop.jpeg);
+  background-color: rgba(0,0,0,.5);
+  background-blend-mode: multiply;
+}
+.cd-section:first-of-type > div::before {
+  /* alert -> all scrolling effects are not visible on small devices */
+  /* content: 'Effects not visible on mobile!'; */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #6a7083;
+}
+.cd-section:nth-of-type(2) > div {
+  background-image: url(../img/咖啡豆.jpeg);
+  background-color: rgba(0,0,0,.3);
+  background-blend-mode: multiply;
+  background-size:cover ;
+}
+.cd-section:nth-of-type(3) > div {
+  background-image: url(../img/濃縮.jpeg);
+  background-color: rgba(0,0,0,.4);
+  background-blend-mode: multiply;
+  background-size:cover ;
+
+}
+.cd-section:nth-of-type(4) > div {
+  background-image: url(../img/美式.jpeg);
+  background-color: rgba(0,0,0,.4);
+  background-size:cover ;
+}
+.cd-section:nth-of-type(5) > div {
+  background-image: url(../img/拿鐵.jpeg);
+  background-color: rgba(0,0,0,.4);
+  height: 95vh;
+  background-size:cover ;
+
+}
+/* [data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+[data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
+  background-image: url("../img/img-1.jpg");
+}
+[data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
+  background-image: url("../img/img-2.jpg");
+}
+[data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
+  background-image: url("../img/img-3.jpg");
+}
+[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+  background-image: url("../img/img-4.jpg");
+}
+[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
+  background-image: url("../img/img-5.jpg");
+} */
+@media only screen and (min-width: 1050px) {
+  .cd-section h2 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  [data-hijacking="on"] .cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  [data-hijacking="on"] .cd-section > div {
+    visibility: visible;
+  }
+  [data-hijacking="off"] .cd-section > div {
+    opacity: 0;
+  }
+  [data-animation="rotate"] .cd-section {
+    /* enable a 3D-space for children elements */
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+  }
+  [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+    -webkit-perspective-origin: center 0;
+    -moz-perspective-origin: center 0;
+    perspective-origin: center 0;
+  }
+  [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
+    box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
+  }
+  [data-animation="opacity"] .cd-section.visible > div {
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .cd-section:first-of-type > div::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .cd-section > div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  [data-hijacking="on"] .cd-section > div {
+    position: absolute;
+  }
+  [data-animation="rotate"] .cd-section > div {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
+
+/* .cd-vertical-nav {
+  /* lateral navigation */
+  /* position: fixed;
+  z-index: 1;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}  */
+/* .cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  /* overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+} */ 
+/* .cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+} */
+/* @media only screen and (min-width: 1050px) {
+  .cd-vertical-nav {
+    display: block;
+  }
+} */

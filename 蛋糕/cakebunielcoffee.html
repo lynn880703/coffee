@@ -1,0 +1,374 @@
+<html>
+
+<head>
+  <title>Buniel Cafe</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="icon" href="../headerlog.ico" type="image/x-icon">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      overflow-x: hidden;
+    }
+   
+    .page-header{
+      margin-top: 0;
+    }
+  .badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+  }
+  .my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+  }
+     /* navbar */
+  .navbar-nav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 30;
+  }
+  .mybadge{
+    margin-top: 0;
+   position: absolute;
+   right: 50px;
+    top: 80px;
+  }
+  .navbar{
+    display: flex;
+    background-color: #5e7480ad;
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .navbar ul{
+    display: flex;
+    list-style: none;
+  }
+  .nav-link{
+         color: #212121;
+         font-size: 18px;
+         margin: 0 10px;
+         font-family:Georgia, 'Times New Roman', Times, serif;
+     }
+  .nav-link:hover{
+         color: #d8d8d8;
+         background-color: #5e7480ad;
+         border-radius: 5px;
+         text-decoration: none;
+         font-size: 20px;
+  }
+     /* 麵包屑 */
+    .mybreadcrumb{
+         background-color: #b0bec57a;
+         margin-bottom: 50px;
+         font-size: 16px;
+         
+     }
+     .breadcrumb{
+         background-color: transparent;
+         letter-spacing: 5px;
+        margin-top:10px
+     }
+     .breadcrumb-item a{
+       
+         color: #006064;
+         text-decoration: none;
+     }
+     .breadcrumb-item a:hover{
+         color: #5e7480ad;
+         text-decoration: none;
+     }
+     .breadcrumb-item.active{
+         color:#9c9896;
+     }
+    /* 商品分頁標題 */
+    .mytitle{
+         margin: 80px;
+         margin-left: 200px;
+     }
+     .mytitle h3{
+       color:#212121;
+       font-size: 44px;
+     }
+     .mytitle h5{
+       color: #5e7480ad;
+       font-family: Georgia, 'Times New Roman', Times, serif; 
+     }
+     /* 商品 */
+  .card-text{
+    padding-top:25px ;
+    font-size:18px;
+  }
+  
+  .btn{
+    background-color:#5e7480ad ;
+    border: none;
+    font-size: 1.5rem;
+  }
+  .cardpic{
+    width: 300px;
+    height: 300px;
+  }
+  .card{
+    margin-top: 30px;
+  }
+  .footer{
+     background-color: #5e74806c;
+       color:#212121;
+       font-family: Georgia, 'Times New Roman', Times, serif;
+       height: 150px;
+       margin-top: 200px; 
+       display: flex;
+     }
+     .iconimg{
+       height: 100px;
+       width: 100px;
+       margin: 25px 20px 25px 30px;
+       background-size: cover;
+     }
+     .mypng{
+       height: 20px;
+       width: 20px;
+       display: flex;
+       float: left;
+       margin-right: 10px;
+     }
+     
+     .carousel-inner{
+       height: 500px;
+     }
+     .mypic{
+       height: 100%;
+     }
+     .myaddress{
+       margin-left: 20px;
+       margin-top: 30px;
+       width: 100%;
+       font-size: 17px;
+     }
+     
+     .copyright{
+       width: 60%;
+       padding-top:50px;
+     }
+     .navbar-title{
+       margin-left: 3rem;
+       font-family:Georgia, 'Times New Roman', Times, serif;
+     }
+     
+  </style>
+</head>
+
+<body >
+  <div class="page-header navbar navbar-expand-lg">
+    <h1 class="navbar-title">Buniel Cafe</h1>
+    <div class=" collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <a class="nav-link" href="../首頁/bunielcoffee.html">首頁 <span class="sr-only">(current)</span></a>
+        </li>
+        <li >
+          <a class="nav-link" href="../咖啡豆/coffeebeanhome.html">咖啡豆</a>
+        </li>
+        <li >
+          <a class="nav-link" href="../飲料/coffeedrink.html">飲品</a>
+        </li>
+        <li >
+          <a class="nav-link" href="./cakebunielcoffee.html">甜點</a>
+        </li>
+        
+        <li >
+          <h1 class="mybadge">
+          <div style=" cursor: pointer;" >
+          <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+          </div>
+          </h1>
+        </li>
+      </ul>
+    </div>
+</div>
+<div class="mybreadcrumb ">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item "><a href="../首頁/bunielcoffee.html">首頁</a></li>
+      <li class="breadcrumb-item active" aria-current="page">甜點</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container mytitle">
+  <div class="row">
+      <div class="col-12">
+          <h3>甜點_蛋糕</h3>
+          <h5>Cake</h5>
+      </div>
+  </div>
+</div>
+  <!-- <button type="addNewProduct" name="addNewProduct" id="addNewProduct">Add New Product</button> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-lg-4 text-center card">
+      <img src="./蛋糕/咖啡巧克力松露蛋糕.jpeg" class="cardpic">
+      <br>
+    <div class="card-body">
+      <div class="card-text">咖啡巧克力松露蛋糕 <br>Chocolate Mille Crêpes<br><strong>$85</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="1" data-name="咖啡巧克力松露蛋糕" data-summary="summary 1" data-price="85" data-quantity="1" data-image="./蛋糕/咖啡巧克力松露蛋糕.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-4  text-center card">
+      <img src="./蛋糕/岩漿巧克力蛋糕.jpeg" class="cardpic">
+      <br>
+    <div class="card-body">
+      <div class="card-text">岩漿巧克力蛋糕 <br>Fondant au Chocolate<br><strong>$90</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="2" data-name="岩漿巧克力蛋糕" data-summary="summary 2" data-price="90" data-quantity="1" data-image="./蛋糕/岩漿巧克力蛋糕.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-4  text-center card">
+      <img src="./蛋糕/檸檬塔.jpeg" class="cardpic">
+      <br>
+      <div class="card-body">
+      <div class="card-text">檸檬塔<br>Lemon Tart<br><strong>$70</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="3" data-name="檸檬塔" data-summary="summary 3" data-price="70" data-quantity="1" data-image="./蛋糕/檸檬塔.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-4 text-center card">
+      <img src="./蛋糕/法式千層薄餅.jpeg" class="cardpic">
+      <br>
+      <div class="card-body">
+      <div class="card-text">法式千層薄餅<br>Mille Crêpes<br><strong>$95</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="4" data-name="法式千層薄餅" data-summary="summary 4" data-price="95" data-quantity="1" data-image="./蛋糕/法式千層薄餅.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-4 text-center card">
+      <img src="./蛋糕/法式巧克力千層薄餅.jpeg" class="cardpic">
+      <br>
+      <div class="card-body">
+      <div class="card-text">法式巧克力千層薄餅<br>Chocolate Mille Crêpes<br><strong>$140</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="5" data-name="法式巧克力千層薄餅" data-summary="summary 5" data-price="140" data-quantity="1" data-image="./蛋糕/法式巧克力千層薄餅.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-4 text-center card">
+      <img src="./蛋糕/經典起司蛋糕.jpeg" class="cardpic">
+      <br>
+      <div class="card-body">
+      <div class="card-text">經典起司蛋糕<br>Classic Cheese Cake<br><strong>$100</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="6" data-name="經典起司蛋糕" data-summary="summary 6" data-price="100" data-quantity="1" data-image="./蛋糕/經典起司蛋糕.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    <div class="col-md-3 col-lg-4 text-center card">
+      <img src="./蛋糕/芝麻巧克力蛋糕.jpeg" class="cardpic">
+      <br>
+      <div class="card-body">
+      <div class="card-text">芝麻巧克力蛋糕<br>Sesame Chocolate Cake<br>
+        <strong>$120</strong></div> 
+      <br>
+      <button class="btn btn-info my-cart-btn" data-id="7" data-name="芝麻巧克力蛋糕" data-summary="summary 7" data-price="120" data-quantity="1" data-image="./蛋糕/芝麻巧克力蛋糕.jpeg">加入購物車</button>
+    </div>
+    </div>
+
+    
+    </div>
+  </div>
+  
+  <div class="container-fuild">
+    <div class="row footer">
+      <img src="./icon/icon-img.ico" alt="" class="iconimg">
+        <p class="copyright">&copy;copyright-布尼爾咖啡BunielCoffee</p>
+        
+      <div class="col myaddress">
+        <img src="./icon/email.png" alt="" class="mypng  mr-2">
+        <p >service@bunielcafe.com</p>
+        <img src="./icon/telephone.png" alt="" class="mypng float-left mr-2">
+        <p>0800-000-000</p>
+        <img src="./icon/address.png" alt="" class="mypng float-left mr-2">
+        <p>坪林市八德中路152巷10號</p>
+      </div>
+  </div>
+
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script type='text/javascript' src="js/bootstrap.min.js"></script>
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+
+  <script type="text/javascript">
+  $(function () {
+    // 添加至溝物車動畫
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="50px" height="50px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        right: position.right,
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+    
+    // 購物車
+    $('.my-cart-btn').myCart({
+      currencySymbol: '$',
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      classProductQuantity: 'my-product-quantity',
+      classProductRemove: 'my-product-remove',
+      classCheckoutCart: 'my-cart-checkout',
+      affixCartIcon: true,
+      showCheckoutModal: true,
+      numberOfDecimals: 2,
+      cartItems: [
+        
+      ],
+      // clickOnAddToCart: function($addTocart){
+      //   goToCartIcon($addTocart);
+      // },
+      afterAddOnCart: function(products, totalPrice, totalQuantity) {
+        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+      },
+      clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+      },
+      checkoutCart: function(products, totalPrice, totalQuantity) {
+        var checkoutString = "訂單總金額: " + totalPrice + "\n商品數量: " + totalQuantity;
+        // checkoutString += "\n\n data-id \t name \t summary \t price \t quantity \t image path";
+        $.each(products, function(){
+          checkoutString += ("\n\n " +  this.name + " \t 金額：＄" + this.price + " \t數量： " + this.quantity );
+        });
+        alert(checkoutString)
+        console.log("checking out", products, totalPrice, totalQuantity);
+      },
+      getDiscountPrice: function(products, totalPrice, totalQuantity) {
+        console.log("calculating discount", products, totalPrice, totalQuantity);
+        return totalPrice * 0.5;
+      }
+    });
+
+    // $("#addNewProduct").click(function(event) {
+    //   var currentElementNo = $(".row").children().length + 1;
+    //   $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+    // });
+  });
+  </script>
+
+</body>
+
+</html>
