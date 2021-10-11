@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    overflow-x: hidden;
+  }
+ 
+  .page-header{
+    margin-top: 0;
+  }
+.badge-notify{
+  background:red;
+  position:relative;
+  top: -20px;
+  right: 10px;
+}
+.my-cart-icon-affix {
+  position: fixed;
+  z-index: 999;
+}
+   /* navbar */
+.navbar-nav{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 30;
+}
+.mybadge{
+  margin-top: 0;
+ position: absolute;
+ right: 50px;
+  top: 80px;
+}
+.navbar{
+  display: flex;
+  background-color: #5e7480ad;
+  margin-right: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+.nav-link{
+       color: #212121;
+       font-size: 18px;
+       margin: 0 10px;
+       font-family:Georgia, 'Times New Roman', Times, serif;
+   }
+.nav-link:hover{
+       color: #d8d8d8;
+       background-color: #5e7480ad;
+       border-radius: 5px;
+       text-decoration: none;
+       font-size: 20px;
+}
+   /* 麵包屑 */
+  .mybreadcrumb{
+       background-color: #b0bec57a;
+       margin-bottom: 50px;
+       font-size: 16px;
+       
+   }
+   .breadcrumb{
+       background-color: transparent;
+       letter-spacing: 5px;
+      margin-top:10px
+   }
+   .breadcrumb-item a{
+     
+       color: #006064;
+       text-decoration: none;
+   }
+   .breadcrumb-item a:hover{
+       color: #5e7480ad;
+       text-decoration: none;
+   }
+   .breadcrumb-item.active{
+       color:#9c9896;
+   }
+  /* 商品分頁標題 */
+  .mytitle{
+       margin: 80px;
+       margin-left: 200px;
+   }
+   .mytitle h3{
+     color:#212121;
+     font-size: 44px;
+   }
+   .mytitle h5{
+     color: #5e7480ad;
+     font-family: Georgia, 'Times New Roman', Times, serif; 
+   }
+   /* 商品 */
+.card-text{
+  padding-top:25px ;
+  font-size:18px;
+}
+
+.btn{
+  background-color:#5e7480ad ;
+  border: none;
+  font-size: 1.5rem;
+}
+.cardpic{
+  width: 300px;
+  height: 300px;
+}
+.card{
+  margin-top: 30px;
+}
+.footer{
+   background-color: #5e74806c;
+     color:#212121;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     height: 150px;
+     margin-top: 200px; 
+     display: flex;
+   }
+   .iconimg{
+     height: 100px;
+     width: 100px;
+     margin: 25px 20px 25px 30px;
+     background-size: cover;
+   }
+   .mypng{
+     height: 20px;
+     width: 20px;
+     display: flex;
+     float: left;
+     margin-right: 10px;
+   }
+   
+   .carousel-inner{
+     height: 500px;
+   }
+   .mypic{
+     height: 100%;
+   }
+   .myaddress{
+     margin-left: 20px;
+     margin-top: 30px;
+     width: 100%;
+     font-size: 17px;
+   }
+   
+   .copyright{
+     width: 60%;
+     padding-top:50px;
+   }
+   .navbar-title{
+     margin-left: 3rem;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+   }
