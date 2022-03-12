@@ -75,7 +75,9 @@
      li{
        color: #212121c5;
      }
-     
+     a.btn{
+      display: block;
+     }
      .btn-primary{
        background-color: #5e7480ad;
        border: none;
@@ -83,7 +85,25 @@
      .btn-primary:hover{
        background-color: #212121ad;
      }
-     
+     /* 麵包屑 */
+     .mybreadcrumb{
+      background-color: #b0bec57a;
+      }
+      .breadcrumb{
+          background-color: transparent;
+          letter-spacing: 5px;
+      }
+      .breadcrumb-item a{
+          color: #006064;
+          text-decoration: none;
+      }
+      .breadcrumb-item a:hover{
+          color: #5e7480ad;
+          text-decoration: none;
+      }
+      .breadcrumb-item.active{
+          color:#9c9896;
+      }
      /* 左側選單 */
      .list-group{
          margin-top: 50px;
